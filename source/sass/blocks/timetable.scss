@@ -1,0 +1,30 @@
+.timetable {
+  margin-top: 110px;
+  margin-bottom: 90px;
+}
+
+.timetable__wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: $tablet-width) {
+  .timetable {
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .timetable {
+    margin-top: 55px;
+    margin-bottom: 35px;
+  }
+
+  .timetable__wrapper {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+}

@@ -1,0 +1,33 @@
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@mixin reset-decoration() {
+  text-decoration: none;
+}
+
+@mixin flexible-background() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin vertical-position() {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin centered-position() {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin text-options($font-size, $color, $line-height, $font-weight) {
+  font-size: $font-size;
+  color: $color;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}

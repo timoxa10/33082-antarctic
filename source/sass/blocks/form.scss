@@ -1,0 +1,147 @@
+.form {
+  background: $dark-blue;
+  box-sizing: border-box;
+  padding: 25px 50px 55px;
+}
+
+.form__title {
+  @include text-options(18px, $white, 27px, 500);
+  margin-bottom: 30px;
+}
+
+.form__field {
+  margin-bottom: 20px;
+}
+
+.form__personal-data {
+  margin-top: -5px;
+}
+
+.form__input {
+  width: 100%;
+  background: $white;
+  border: none;
+  padding: 13px 0 10px 16px;
+
+  @include text-options(14px, #011C40, 21px, normal);
+}
+
+::placeholder {
+  color: #011c40;
+}
+
+:-ms-input-placeholder {
+  color: #011c40;
+}
+
+::-ms-input-placeholder {
+  color: #011c40;
+}
+
+.form__checkbox {
+  position: relative;
+  padding-left: 20px;
+
+  @include text-options(10px, $white, 13px, normal);
+}
+
+.form__checkbox input[type="checkbox"] + .form__checkbox-indicator {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background: $white;
+}
+
+.form__checkbox input[type="checkbox"]:checked + .form__checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  width: 14px;
+  height: 12px;
+  background: url("../img/icon-checked.svg") no-repeat 0 0;
+  cursor: pointer;
+}
+
+.form__button {
+  width: 100%;
+  display: block;
+  background: $white;
+  padding: 11px 0;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+
+  @include text-options(14px, $dark-blue, 21px, 600);
+}
+
+.form__checkbox-mobile {
+  display: inline-block;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.form__title br {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    padding-bottom: 50px;
+  }
+
+  .form__title {
+    margin-bottom: 30px;
+  }
+
+  .form__input {
+    padding: 12px 0 10px 16px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    padding: 15px 30px 40px 30px;
+  }
+
+  .form__title {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .form__checkbox {
+    padding-left: 28px;
+    line-height: 12px;
+  }
+
+  .form__personal-data {
+    margin-top: -8px;
+  }
+
+  .form__checkbox input[type="checkbox"] + .form__checkbox-indicator {
+    top: 2px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__checkbox input[type="checkbox"]:checked + .form__checkbox-indicator::after {
+    top: 6px;
+  }
+
+  .form__checkbox-mobile {
+    display: block;
+    padding-left: 28px;
+    margin-top: -5px;
+  }
+
+  .form__button {
+    margin-top: 30px;
+  }
+
+  .form__title br {
+    display: block;
+  }
+}

@@ -1,0 +1,56 @@
+.promo-offer {
+  padding: 155px 0 0 95px;
+}
+
+.promo-offer__title {
+  @include text-options(54px, $white, 66px, bold);
+  margin-bottom: 10px;
+}
+
+.promo-offer__intro {
+  @include text-options(20px, $white, 24px, normal);
+  margin-top: 0;
+}
+
+.promo-offer__intro br {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .promo-offer {
+    padding-top: 185px;
+    padding-left: 0;
+  }
+
+  .promo-offer__title {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  .promo-offer__intro {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo-offer {
+    padding: 0 15px 0 15px;
+    position: absolute;
+    top: 150px;
+  }
+
+  .promo-offer__title {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+
+  .promo-offer__intro {
+    font-size: 16px;
+  }
+
+  .promo-offer__intro br {
+    display: block;
+  }
+}
