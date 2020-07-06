@@ -1,0 +1,34 @@
+.page-footer {
+  background: $dark-blue;
+  padding: 50px 0;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__social {
+  margin-left: auto;
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer {
+    padding: 45px 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-footer__social {
+    margin: 0;
+  }
+
+  .page-footer {
+    padding-top: 40px;
+  }
+}

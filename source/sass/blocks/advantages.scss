@@ -36,7 +36,7 @@
 .advantages__subtitle--liner::before {
   content: "";
   position: absolute;
-  background: no-repeat 0 0 url("../img/D-icon-advantage-01.svg");
+  background: no-repeat 0 0 url("../img/icon-D-advantage-01.svg");
   top: -50px;
   left: 0;
   width: 27px;
@@ -46,7 +46,7 @@
 .advantages__subtitle--system::before {
   content: "";
   position: absolute;
-  background: no-repeat 0 0 url("../img/D-icon-advantage-02.svg");
+  background: no-repeat 0 0 url("../img/icon-D-advantage-02.svg");
   top: -45px;
   left: 0;
   width: 38px;
@@ -56,7 +56,7 @@
 .advantages__subtitle--zodiac::before {
   content: "";
   position: absolute;
-  background: no-repeat 0 0 url("../img/D-icon-advantage-03.svg");
+  background: no-repeat 0 0 url("../img/icon-D-advantage-03.svg");
   top: -40px;
   left: 0;
   width: 42px;
@@ -65,8 +65,11 @@
 
 .advantages__intro-text {
   @include text-options(14px, $dark-blue, 20px, normal);
-  margin-top: 10px;
-  padding-right: 20px;
+  margin-top: 12px;
+}
+
+.advantages__intro-text br {
+  display: none;
 }
 
 @media (max-width: $tablet-width) {
@@ -88,10 +91,6 @@
     width: 30.3%;
     min-height: 310px;
     padding: 45px 10px 0 20px;
-  }
-
-  .advantages__intro-text {
-    padding-right: 0;
   }
 
   .advantages__subtitle--liner::before {

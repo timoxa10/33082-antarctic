@@ -1,0 +1,41 @@
+.social__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  margin-right: 33px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: $tablet-width) {
+  .social__item {
+    margin-right: 23px;
+  }
+
+  .social__box--facebook {
+    width: 9px;
+    height: 16px;
+  }
+
+  .social__box--instagram {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social__box--twitter {
+    width: 16px;
+    height: 13px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .social__list {
+    padding-top: 20px;
+  }
+}

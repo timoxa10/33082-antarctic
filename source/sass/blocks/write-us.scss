@@ -13,7 +13,7 @@
 .write-us__wrapper {
   display: flex;
   align-items: center;
-  padding: 50px 60px 45px 60px;
+  padding: 50px 60px 50px;
 }
 
 .write-us__text {
@@ -27,13 +27,18 @@
 
 .write-us__title {
   @include text-options(40px, $dark-blue, 60px, bold);
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.write-us__title br {
+  display: none;
 }
 
 .write-us__intro {
   @include text-options(18px, $dark-blue, 27px, normal);
   max-width: 355px;
+  margin-top: 10px;
 }
 
 .write-us__intro br {
@@ -51,7 +56,7 @@
 
   .write-us__wrapper {
     flex-direction: column;
-    padding-top: 90px;
+    padding-top: 80px;
     padding-bottom: 100px;
   }
 
@@ -61,7 +66,6 @@
   }
 
   .write-us__form {
-    width: 72.2%;
     margin: 0 auto;
   }
 
@@ -88,17 +92,21 @@
   }
 
   .write-us__wrapper {
-    padding: 60px 0 60px 0;
+    padding: 45px 15px 65px 15px;
   }
 
   .write-us__text {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 
   .write-us__title {
     font-size: 24px;
     line-height: 31px;
     margin-bottom: 15px;
+  }
+
+  .write-us__title br {
+    display: block;
   }
 
   .write-us__intro {
