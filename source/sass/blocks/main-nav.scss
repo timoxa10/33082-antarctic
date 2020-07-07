@@ -95,6 +95,10 @@
     background: $white;
   }
 
+  .main-nav--nojs .logo--mobile-nojs {
+    display: block;
+  }
+
   .main-nav--nojs ~ .promo-offer {
     position: relative;
     top: 0;

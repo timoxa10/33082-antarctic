@@ -7,6 +7,10 @@
   margin-right: 40px;
 }
 
+.logo--mobile-nojs {
+  display: none;
+}
+
 @media (max-width: $tablet-width) {
   .logo__image {
     width: 38px;
