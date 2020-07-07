@@ -90,12 +90,12 @@
 
 .direction__title {
   @include text-options(18px, $white, 27px, normal);
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .direction__title--positioned {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   padding-left: 30px;
 }
 
