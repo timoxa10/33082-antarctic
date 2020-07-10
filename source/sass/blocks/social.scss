@@ -13,6 +13,19 @@
   margin-right: 0;
 }
 
+.social__box {
+  fill: $white;
+}
+
+.social__box:hover {
+  fill: #99a4b2;
+}
+
+.social__box:active {
+  fill: #66768c;
+}
+
+
 @media (max-width: $tablet-width) {
   .social__item {
     margin-right: 23px;

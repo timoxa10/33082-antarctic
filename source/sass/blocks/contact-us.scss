@@ -28,7 +28,10 @@
 
 .contact-us__address,
 .contact-us__phone {
+  display: block;
+
   @include text-options(16px, $dark-blue, 24px, normal);
+  @include reset-decoration;
   position: relative;
   margin-left: 25px;
 }

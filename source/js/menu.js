@@ -5,7 +5,7 @@ var navToggle = document.querySelector('.main-nav__toggle');
 var navLogo = document.querySelector('.logo__image--js');
 navMain.classList.remove('main-nav--nojs');
 
-navToggle.addEventListener('click', function () {
+var toogleMenu = function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
@@ -15,4 +15,10 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
     navLogo.setAttribute('src', 'img/M-logo.svg');
   }
-});
+};
+
+var navToggleClickHandler = function () {
+  toogleMenu();
+};
+
+navToggle.addEventListener('click', navToggleClickHandler);

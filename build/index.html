@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +96,7 @@
     <div class="content-wrapper">
       <h3 class="timetable__title title-medium title-medium--centered">Ближайшие круизы</h3>
       <div class="timetable__wrapper direction">
-        <article class="direction__item direction__item--cruise-01">
+        <article class="direction__item direction__item--cruise-01" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Астория”</p>
             <div class="direction__wrap">
@@ -119,8 +119,8 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Астория”</p>
         </article>
-        <article class="direction__item direction__item--cruise-06">
-          <div class="direction__actions">
+        <article class="direction__item direction__item--cruise-06" onClick="return true">
+          <div class="direction__actions direction__actions--active">
             <p class="direction__title">Круиз “Элайн”</p>
             <div class="direction__wrap">
               <strong class="direction__subcategory-name">Маршрут</strong>
@@ -142,7 +142,7 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Элайн”</p>
         </article>
-        <article class="direction__item direction__item--cruise-03">
+        <article class="direction__item direction__item--cruise-03" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Атлантис”</p>
             <div class="direction__wrap">
@@ -165,7 +165,7 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Атлантис”</p>
         </article>
-        <article class="direction__item direction__item--cruise-04">
+        <article class="direction__item direction__item--cruise-04" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Одиссей”</p>
             <div class="direction__wrap">
@@ -188,7 +188,7 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Одиссей”</p>
         </article>
-        <article class="direction__item direction__item--cruise-05">
+        <article class="direction__item direction__item--cruise-05" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Олимпия”</p>
             <div class="direction__wrap">
@@ -211,7 +211,7 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Олимпия”</p>
         </article>
-        <article class="direction__item direction__item--cruise-06">
+        <article class="direction__item direction__item--cruise-06" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Аврора”</p>
             <div class="direction__wrap">
@@ -234,7 +234,7 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Аврора”</p>
         </article>
-        <article class="direction__item direction__item--cruise-07">
+        <article class="direction__item direction__item--cruise-07" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Леонор”</p>
             <div class="direction__wrap">
@@ -257,7 +257,7 @@
           </div>
           <p class="direction__title direction__title--positioned">Круиз “Леонор”</p>
         </article>
-        <article class="direction__item direction__item--cruise-08">
+        <article class="direction__item direction__item--cruise-08" onClick="return true">
           <div class="direction__actions">
             <p class="direction__title">Круиз “Минион - 1”</p>
             <div class="direction__wrap">
@@ -291,6 +291,8 @@
       </div>
       <div class="write-us__form form">
         <p class="form__title">Оставьте заявку<br> и мы свяжемся с вами<br> в ближайшее время</p>
+        <p class="form__title form__title--success hidden">Ваша форма успешно отправлена!</p>
+        <p class="form__title form__title--error hidden">Что-то пошло не так :( Попробуйте позже.</p>
         <form class="form__content" action="https://echo.htmlacademy.ru" method="post">
           <div class="form__field">
             <label class="visually-hidden" for="user-name"></label>
@@ -298,15 +300,15 @@
           </div>
           <div class="form__field">
             <label class="visually-hidden" for="user-phone"></label>
-            <input required="" class="form__input" id="user-phone" type="tel" name="user-phone" placeholder="89236889975">
+            <input required="" class="form__input form__input-phone" id="user-phone" type="tel" name="user-phone" placeholder="89236889975">
           </div>
           <div class="form__field">
             <label class="visually-hidden" for="user-email"></label>
             <input required="" class="form__input" id="user-email" type="email" name="user-email" placeholder="grishaewa.lera@gmail.com">
           </div>
           <div class="form__personal-data">
-            <label class="form__checkbox">
-              <input type="checkbox" name="personal-data" class="visually-hidden" checked="">
+            <label class="form__checkbox" for="personal-data">
+              <input type="checkbox" name="personal-data" class="form__checkbox-input visually-hidden" id="personal-data" checked="">
               <span class="form__checkbox-indicator"></span>
               Я согласен на обработку <span class="form__checkbox-mobile">моих персональных данных</span>
             </label>
@@ -325,7 +327,7 @@
           Приезжайте к&nbsp;нам в&nbsp;офис и мы вам все расскажем.
         </p>
         <p class="contact-us__address">г. Санкт Петербург,<br> ул. Большая Конюшенная, 19/8</p>
-        <p class="contact-us__phone">8-800-200-00-00</p>
+        <a class="contact-us__phone" href="tel:88002000000">8-800-200-00-00</a>
       </div>
     </div>
   </section>
@@ -355,7 +357,7 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link centered" href="https://www.facebook.com/htmlacademy">
+            <a class="social__link" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg class="social__box social__box--facebook" width="11" height="20">
                 <use xlink:href="img/sprite.svg#icon-social-fb"></use>
@@ -363,7 +365,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link centered" href="https://www.instagram.com/htmlacademy">
+            <a class="social__link" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в Инстаграме</span>
               <svg class="social__box social__box--instagram" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-social-instagram"></use>
@@ -371,7 +373,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link centered" href="https://twitter.com/htmlacademy_ru">
+            <a class="social__link" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">Мы в Твиттере</span>
               <svg class="social__box social__box--twitter" width="20" height="16">
                 <use xlink:href="img/sprite.svg#icon-social-twitter"></use>
@@ -382,6 +384,9 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="js/backend.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
